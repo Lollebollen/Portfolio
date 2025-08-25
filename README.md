@@ -1,3 +1,3 @@
-# Portfolio
-## Joel Larsson
-All my public accomplishments!
+# Joel Larsson's Portfolio
+
+_All_ my *public* accomplishments!
