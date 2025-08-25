@@ -1,3 +1,3 @@
 # Portfolio
-** Joel Larsson
+## Joel Larsson
 All my public accomplishments!
