@@ -13,7 +13,7 @@ Timeframe: 8+ weeks
 
 ```
 Tools: Unity, Firebase
-Genre: Narative Horror, Puzzle
+Genre: 2D Platformer
 Timeframe: 4 weeks
 ```
 ### [Your Platform](Your%20Platform) ← Info Here!
@@ -21,7 +21,7 @@ Timeframe: 4 weeks
 ```
 Tools: Unity
 Team: 3 Programmers, 4 Artist
-Genre: Top-down shooter, Party game
+Genre: Couch CO-OP Party Shooter
 Timeframe: 8+ weeks
 ```
 ### [REGAUGE](REGAUGE) ← Info Here!
