@@ -1,15 +1,6 @@
 # Your Platform
 
-My contributions
-1) Movement
-2) Rotation
-3) Destructible glass
-4) Video Tutorial
-5) Medals system
-6) Implementation of animations and a few of the VFX
+1) Working with a Database
+2) Building System
+3) Porting to Mobile
 
-Partial contributions
-1) Shooting
-   - Bullet Magnetism
-   - Anti Wall Shot trough
-2) 
