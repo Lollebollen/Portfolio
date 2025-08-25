@@ -10,6 +10,7 @@ Genre: Narative Horror, Puzzle
 Timeframe: 8+ weeks
 ```
 ### [New Folder](New%20Folder) ← Info Here!
+--- 
 
 ```
 Tools: Unity, Firebase
@@ -17,6 +18,7 @@ Genre: 2D Platformer
 Timeframe: 4 weeks
 ```
 ### [Your Platform](Your%20Platform) ← Info Here!
+--- 
 
 ```
 Tools: Unity
@@ -25,6 +27,7 @@ Genre: Couch CO-OP Party Shooter
 Timeframe: 8+ weeks
 ```
 ### [REGAUGE](REGAUGE) ← Info Here!
+--- 
 
 ```
 Tools: MonoGame, SDL3
