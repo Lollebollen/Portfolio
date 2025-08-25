@@ -2,7 +2,6 @@
 
 _All_ my **public** accomplishments!
 ---
----
 
 ### [New Folder](New%20Folder) ← Info Here!
 ### [REGAUGE](REGAUGE) ← Info Here!
