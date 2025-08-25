@@ -5,7 +5,7 @@ All my **public** accomplishments!
 
 ```
 Role: Proggramer
-Engine: Unity
+Tools: Unity
 Team: 3 Programmers, 4 Artist
 Genre: Narative Horror, Puzzle
 Timeframe: 8+ weeks
@@ -14,16 +14,15 @@ Timeframe: 8+ weeks
 
 ```
 Role: Proggramer
-Engine: Unity
-Database: Firebase
+Tools: Unity, Firebase
 Genre: Narative Horror, Puzzle
-Timeframe: 8+ weeks
+Timeframe: 4 weeks
 ```
 ### [Your Platform](Your%20Platform) ← Info Here!
 
 ```
 Role: Proggramer
-Engine: Unity
+Tools: Unity
 Team: 3 Programmers, 4 Artist
 Genre: Top-down shooter, Party game
 Timeframe: 8+ weeks
@@ -32,6 +31,6 @@ Timeframe: 8+ weeks
 
 ```
 Role: Proggramer
-Genre: Narative Horror, Puzzle
+Tools: MonoGame, SDL3
 ```
 ### [Frameworks games](Frameworks%20games) ← Info Here!
