@@ -2,5 +2,4 @@
 
 _All_ my **public** accomplishments!
 
-# [New Folder](NewFolder)
-[Goodle.com](HI)
+# [New Folder](New Folder)
