@@ -22,7 +22,7 @@ Timeframe:  8+ weeks
 
 
 
-### [Your Platform](Your%20Platform) ← Info Here!
+## [Your Platform](Your%20Platform) ← Info Here!
 ```
 Tools:      Unity, Firebase
 Genre:      2D Platformer
@@ -37,7 +37,7 @@ Timeframe:  4 weeks
 <br/>
 
 
-### [REGAUGE](REGAUGE) ← Info Here!
+## [REGAUGE](REGAUGE) ← Info Here!
 ```
 Tools:      Unity
 Team:       3 Programmers, 4 Artist
@@ -63,7 +63,7 @@ Timeframe:  8+ weeks
 --- 
 <br/>
 
-### [Frameworks games](Frameworks%20games) ← Info Here!
+## [Frameworks games](Frameworks%20games) ← Info Here!
 ```
 Tools:  MonoGame, SDL3
 ```
