@@ -29,6 +29,7 @@ Genre: Couch CO-OP Party Shooter
 Timeframe: 8+ weeks
 ```
 ### [REGAUGE](REGAUGE) ← Info Here!
+<img width="315" height="250" alt="REGAUGEPromo" src="https://github.com/user-attachments/assets/ab932493-7450-47e5-9689-0b76d2d2174d" />
 --- 
 
 ```
