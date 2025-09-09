@@ -1,12 +1,10 @@
 # *New Folder*
 ## Game Summary
-blalballa
+*New Folder* is a horror puzzle game where you dive into an old pc and figure out passwords to discover mysteries.
 
 ## Creating a File System 
-#### Saving 
- At first when trying to save a windos scritable object to an icon I used InstanceID, it worked until it didn't. Since it only referce to the same object during the same runtime, which meant it could not be used in such a way. After finding out that the REF folder should idealy not be used I seateld on using a refrence list of all of the window datas instead.
-
- Saving to JSON only needed to be done during development which ment it could be stored inside a scritable object
+ #### Data Structure
+The data structure is just folders holding files and its own folder hierarchy. Each folder has a GUID that can be used to retrieve its data and the desktop is just a unique folder that opens up automatically. The folder hierarchy is stored inside the folder to make the check to see if you are trying to place a folder inside itself easier.
 
  <Details>
  <summary> Code </summary>
@@ -17,9 +15,12 @@ blalballa
 
  </Details>
 
+#### Saving 
+ At first when trying to save a windows scriptable object to an icon I used InstanceID, it worked until it didn't. Since it only references the same object during the same runtime, which means it could not be used in such a way. After finding out that the resource folder should ideally not be used, I settled on using a reference list of all of the windows data instead.
 
- #### Data Structure
-The data structure is just folders holding files and its own folder heiarcy. Each folder has a GUID that can be used to retrive it's data and the desktop is just a uneqie folder that opens up automaticly. The folder heiarcy is stored inside the folder to make the check to see if you are trying to place a folder insde itself easier.
+
+ Saving to JSON only needed to be done during development which meant it could be stored inside a scriptable object.
+
 
  <Details>
  <summary> Code </summary>

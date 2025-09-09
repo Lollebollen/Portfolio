@@ -4,7 +4,7 @@
 ```
 Tools:      Unity
 Team:       3 Programmers, 4 Artist
-Genre:      Narative Horror, Puzzle
+Genre:      Narrative Horror, Puzzle
 Timeframe:  8+ weeks
 ```
 <img width="315" height="250" alt="NewFolderPromo" src="https://github.com/user-attachments/assets/e82c16d4-e5d4-4f31-8f12-0284de3d3a09" /> <br/>
@@ -13,7 +13,7 @@ Timeframe:  8+ weeks
   - Saving data to JSON
 - Windows scritabel objects
 - Multi select
-- A few "glitchs"
+- A few "glitches"
   - Scattering files
   - Merging Image
 
@@ -57,14 +57,8 @@ Timeframe:  8+ weeks
 - Shooting
    - Bullet Magnetism
    - Bouncing bullets
-   - Bullet can't be shoot trough walls
+   - Bullet can't be shot through walls
 - Game Camera
 
 --- 
-<br/>
 
-## [Frameworks games](Frameworks%20games) ← Info Here!
-```
-Tools:  MonoGame, SDL3
-```
-### Key Features
