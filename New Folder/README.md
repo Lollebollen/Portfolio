@@ -6,6 +6,8 @@
  #### Data Structure
 The data structure is just folders holding files and its own folder hierarchy. Each folder has a GUID that can be used to retrieve its data and the desktop is just a unique folder that opens up automatically. The folder hierarchy is stored inside the folder to make the check to see if you are trying to place a folder inside itself easier.
 
+<img width="788" height="390" alt="DuckDuckGo_FMJW2pcGTb" src="https://github.com/user-attachments/assets/9505b8a3-44bc-4434-a87a-0e7fc20b580e" />
+
  <Details>
  <summary> Code </summary>
 
@@ -42,6 +44,7 @@ add image here
 ```
 
  </Details>
+
 
 
 
