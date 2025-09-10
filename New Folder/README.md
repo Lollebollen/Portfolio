@@ -6,7 +6,7 @@
  #### Data Structure
 The data structure is just folders holding files and its own folder hierarchy. Each folder has a GUID that can be used to retrieve its data and the desktop is just a unique folder that opens up automatically. The folder hierarchy is stored inside the folder to make the check to see if you are trying to place a folder inside itself easier.
 
-<img width="788" height="390" alt="DuckDuckGo_FMJW2pcGTb" src="https://github.com/user-attachments/assets/9505b8a3-44bc-4434-a87a-0e7fc20b580e" />
+<img width="546" height="254" alt="Data structure" src="https://github.com/user-attachments/assets/9505b8a3-44bc-4434-a87a-0e7fc20b580e" />
 
  <Details>
  <summary> Code </summary>
@@ -34,6 +34,10 @@ The data structure is just folders holding files and its own folder hierarchy. E
  </Details>
 
 #### Folder Action
+To make the game feel as immersive as possible it needed to feel like a computer which made me add as many small quirks of file managemt that time would allow. Some of these small things that are not necisary for the gameplay include Multiselecting, renaming files and shortcuts. 
+
+
+
 add image here
 
  <Details>
