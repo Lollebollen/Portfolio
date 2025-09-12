@@ -14,17 +14,79 @@ The largest problem with using Firebase only for asynchronous multiplayer was th
 
 ```cs
 
+private void CheckForOpenGame(DataSnapshot snapShot)
+{
+    GameStates gameStates = JsonUtility.FromJson<GameStates>(snapShot.GetRawJsonValue());
+
+    for (int i = 0; i < gameStates.activeStatus.Length; i++)
+    {
+        long time = gameStates.activeStatus[i].timeSetActive;
+        if (!gameStates.activeStatus[i].isActive || (time < System.DateTime.UtcNow.Ticks && new System.DateTime(time).Day != System.DateTime.UtcNow.Day))
+        {
+            SetGameActive(i);
+            FetchGameData(i);
+            return;
+        }
+    }
+
+    startButton.interactable = true;
+    Debug.LogWarning("No game is active, Try again later");
+}
+
+private void SetGameActive(int i)
+{
+    Active active = new Active(true, System.DateTime.UtcNow.Ticks);
+    database.RootReference.Child("gameStates").Child("activeStatus").Child(i.ToString()).SetRawJsonValueAsync(JsonUtility.ToJson(active)).ContinueWithOnMainThread(task =>
+    {
+        if (task.Exception != null) { Debug.Log(task.Exception); }
+        else
+        {
+            gameStateindex = i;
+            startTime = active.timeSetActive;
+            TryToStartGame(false);
+        }
+    });
+}
+
+private void FetchGameData(int i)
+{
+    database.RootReference.Child("games").Child("gameData").Child(i.ToString()).GetValueAsync().ContinueWithOnMainThread(task =>
+    {
+        if (task.Exception != null) { Debug.Log(task.Exception); }
+        else
+        {
+            gameDataindex = i;
+            gameData = task.Result.GetRawJsonValue();
+            TryToStartGame(false);
+        }
+    });
+}
+
+private void TryToStartGame(bool isReplay)
+{
+    if (gameDataindex == gameStateindex && gameData != null && gameData.Length > 1 && startTime != default)
+    {
+        StartGame(isReplay);
+    }
+}
+
 ```
 
  </Details>
 
-### level Building
+## level Building
 
 
 #### Selecting blocks
+
+The building is the main part of the game and it could not be to fomrulaic or boring. The solution I went with was to make it random and make the selection take two stages. The random is weighted to make it more inpactful to get the more rare types of blocks. While making it a two step process add more structure and skill into the mechaniq, aswell as hopefully making the random aspect more engaging the hopeing for something good.
+
 <img width="546" height="254" alt="Sellecting blocks" src="https://github.com/user-attachments/assets/6a5d2511-419d-426d-af60-2f79ccc70dbe" />
 
 #### Placing blocks
+
+The placing is heavily inspierd by _Ballons Tower Defens_ and _Plants vs Zombies 2_, since they both let you drag objects into a playarea with your fingers. My main gripe with thier implementation is the inacurase of not being able to see exactly were you are placing down. The way I got around this is using the fact that my building takes place in a stress free enviroment were an extra input will not stress the player, specificly I made it so you can drag from anywhere on the screen and then you just need to accept the position.
+
 <img width="546" height="254" alt="Sellecting blocks" src="https://github.com/user-attachments/assets/58b67f38-4d8a-4550-8c17-8cc8a1a9a170" />
 
 ### Replays
@@ -35,6 +97,47 @@ The replays just initilize the level like usual but instead of a player it just 
  <summary> Code </summary>
 
 ```cs
+
+using UnityEngine;
+
+public class GhostPlayer : MonoBehaviour
+{
+    Ghost ghost;
+    float startTime;
+    int i = 1;
+
+    public void SetGhost(Ghost ghost)
+    {
+        this.ghost = ghost;
+        startTime = Time.time;
+    }
+
+    private void Update()
+    {
+        if (ghost == null) { return; }
+        FollowGhost();
+    }
+
+    private void FollowGhost()
+    {
+        float ratio;
+        do
+        {
+            if (Time.time - startTime > ghost.times[ghost.times.Length - 1]) { Finished(); return; }
+            ratio = (Time.time - startTime - ghost.times[i - 1]) / (ghost.times[i] - ghost.times[i - 1]);
+            if (ratio < 1) { break; }
+            else { i++; }
+        } while (true);
+
+        Vector3 newPos = new Vector3(ratio * (ghost.x[i] - ghost.x[i - 1]) + ghost.x[i - 1], ratio * (ghost.y[i] - ghost.y[i - 1]) + ghost.y[i - 1], transform.position.z);
+        transform.position = newPos;
+    }
+
+    private void Finished()
+    {
+        LevelManager.Instance.OnReplayComplete();
+    }
+}
 
 ```
 
