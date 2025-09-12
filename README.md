@@ -7,7 +7,15 @@ Team:       3 Programmers, 4 Artist
 Genre:      Narrative Horror, Puzzle
 Timeframe:  8+ weeks
 ```
-<img width="315" height="250" alt="NewFolderPromo" src="https://github.com/user-attachments/assets/e82c16d4-e5d4-4f31-8f12-0284de3d3a09" /> <br/>
+<img width="315" height="250" alt="NewFolderPromo" src="https://github.com/user-attachments/assets/e82c16d4-e5d4-4f31-8f12-0284de3d3a09" /> 
+
+<table>
+  <tr>
+      <img width="315" height="250" alt="NewFolder1" src="https://github.com/user-attachments/assets/3ddd8ec5-786c-45d1-a08e-f5b82e41b32f" />
+      <img width="315" height="250" alt="NewFolder2" src="https://github.com/user-attachments/assets/fe74909b-9cbe-4377-a301-67b264f2a7b1" />
+  </tr>
+</table>
+
 ### My contributions to Project
 - Files and folders
   - Saving data to JSON
