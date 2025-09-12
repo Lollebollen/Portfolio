@@ -90,7 +90,8 @@ The placing is heavily inspierd by _Ballons Tower Defens_ and _Plants vs Zombies
 <img width="546" height="254" alt="Sellecting blocks" src="https://github.com/user-attachments/assets/58b67f38-4d8a-4550-8c17-8cc8a1a9a170" />
 
 ### Replays
-![Unity_Eg3NxK0aFa](https://github.com/user-attachments/assets/efe81cf7-b1b3-4130-9544-149d0498ccae)
+
+<img width="546" height="254" alt="Replay" src="https://github.com/user-attachments/assets/efe81cf7-b1b3-4130-9544-149d0498ccae" />
 
 The replays just initilize the level like usual but instead of a player it just spawns a ghost that interpulates between a bunch of points.
  <Details>
