@@ -245,8 +245,7 @@ public class FolderHolder : MonoBehaviour
 To make the game feel as immersive as possible it needed to feel like a computer which made me add as many small quirks of file management that time would allow. Some of these small things that are not necessary for the gameplay include Multiselecting, renaming files and shortcuts.
 
 
-
-add image here
+![FolderAction](https://github.com/user-attachments/assets/bfaf8492-ebe3-4942-b039-6930182ac8f3)
 
  <Details>
  <summary> Scatter code </summary>
@@ -485,3 +484,4 @@ In retrospect there needed to be tools built alongside my implementations of a l
 
 
  
+
