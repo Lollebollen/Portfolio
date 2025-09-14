@@ -110,7 +110,7 @@ public class PlayerCharacterBase : MonoBehaviour
 The mech rotates a lot and this requires a bit of handling since there are also a few different rotation ways.
 
  <img width="445" height="391" alt="Player Rotation" src="https://github.com/user-attachments/assets/5f0c118a-b8a4-4c9c-b874-cf5a3905d30a" /> <br/>
-The rotations that are being tracked by the player are two input vectors for movement and aiming, then there is the current direction of the legs and the torso which is also being smoothed. Then there is also a dash state where the player slowly becomes more responsive, the first thing that unlocks for the player after the dash is the movement rather than the ability to shoot in the aim direction. Lastly the torso starts to rotate in the input direction again. The movement direction is also used instead of the aim direction when aim input is given, the reason for this was to make the game more accessible and give the player a simpler way to interact with the game.
+The rotations that are being tracked by the player are two input vectors for movement and aiming, then there is the current direction of the legs and the torso which is also being smoothed. Then there is also a dash state where the player slowly becomes more responsive, the first thing that unlocks for the player after the dash is the movement rather than the ability to shoot in the aim direction. Lastly the torso starts to rotate in the input direction again. The movement direction is also used instead of the aim direction when aim input is given, the reason for this was to make the game more accessible and give the player a simpler way to interact with the game. When using a mouse it instead defaults to its direction instead of the movement input. 
 
 
  <Details>
@@ -202,6 +202,7 @@ public class PlayerTorsoRotation : MonoBehaviour
 
 
 The design behind this behemoth of a map was to be a palette cleansers between the more intricate and longer lasting maps that already existed. I wanted it to be a bunch of repeated 1v1s since all the other maps consisted of mostly large open areas where one can not completely have an uninterrupted fight.
+
 
 
 
