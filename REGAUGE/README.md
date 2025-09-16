@@ -198,7 +198,7 @@ public class PlayerTorsoRotation : MonoBehaviour
  </Details>
 
  ## Tiniest Map
- The game had a bit of a problem during a playtest which was that it was really boring to keep playing for a while. This was known ofcourse however the focus until then was to make a great base. So when we felt that we could spend some time we started adding to the breadth of the game including new maps.
+ The game had a bit of a problem during a play test which was that it was really boring to keep playing for a while. This was known of course however the focus until then was to make a great base. So when we felt that we could spend some time we started adding to the breadth of the game including new maps.
 
 
 The design behind this behemoth of a map was to be a palette cleansers between the more intricate and longer lasting maps that already existed. I wanted it to be a bunch of repeated 1v1s since all the other maps consisted of mostly large open areas where one can not completely have an uninterrupted fight.

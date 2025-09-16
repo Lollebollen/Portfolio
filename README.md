@@ -19,7 +19,7 @@ Timeframe:  8+ weeks
 ### My contributions to Project
 - Files and folders
   - Saving data to JSON
-- Windows scritabel objects
+- Windows scriptable objects
 - Multi select
 - A few "glitches"
   - Scattering files

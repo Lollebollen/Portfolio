@@ -242,7 +242,7 @@ public class FolderHolder : MonoBehaviour
  </Details>
 
 #### Folder Action
-To make the game feel as immersive as possible it needed to feel like a computer which made me add as many small quirks of file management that time would allow. Some of these small things that are not necessary for the gameplay include Multiselecting, renaming files and shortcuts.
+To make the game feel as immersive as possible it needed to feel like a computer which made me add as many small quirks of file management that time would allow. Some of these small things that are not necessary for the gameplay include multiselect, renaming files and shortcuts.
 
 
 ![FolderAction](https://github.com/user-attachments/assets/bfaf8492-ebe3-4942-b039-6930182ac8f3)
@@ -429,7 +429,7 @@ Simply put, this game revolves around ui, so therefore I needed to know how to u
 
 #### Window data
 
-The window data scriptable object was made so other people could expand on it. However it did miss on this since along the development it was needed to have one data open two different kinds of windows to sell the glitch effect. So the solution was to simply have two methods, one standard and another for exceptions.
+The window data scriptable objects was made so other people could expand on it. However it did miss on this since along the development it was needed to have one data open two different kinds of windows to sell the glitch effect. So the solution was to simply have two methods, one standard and another for exceptions.
 
  <Details>
  <summary> Code </summary>
