@@ -63,8 +63,7 @@ Timeframe:  8+ weeks
 <table>
   <tr>
       <img width="315" height="250" alt="REGAUGEPromo" src="https://github.com/user-attachments/assets/ab932493-7450-47e5-9689-0b76d2d2174d" />
-      <img width="315" height="240" alt="REGAUGE Gameplay" src="https://github.com/user-attachments/assets/dc8cdeb1-4bce-48c7-a76d-8692fece4be1" />
-
+      <img width="426" height="240" alt="REGAUGE Gameplay" src="https://github.com/user-attachments/assets/dc8cdeb1-4bce-48c7-a76d-8692fece4be1" />
   </tr>
 </table>
 
