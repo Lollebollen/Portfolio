@@ -39,7 +39,7 @@ Timeframe:  4 weeks
 
 </table>
   </tr>
-<img width="400" height="250" alt="Your Platform" src="https://github.com/user-attachments/assets/ae8308db-b39c-4572-ac50-d0b386307ead" />
+<img width="400" height="331" alt="Your Platform" src="https://github.com/user-attachments/assets/ae8308db-b39c-4572-ac50-d0b386307ead" />
 <img width="400" height="331" alt="Unity_Egw6E0FDUV" src="https://github.com/user-attachments/assets/bd8f110f-79af-4a5a-8fbd-a2d549381cb1" />
   </tr>
 </table>
