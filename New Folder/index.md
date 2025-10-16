@@ -38,7 +38,7 @@ using UnityEngine;
 public class FolderHolder : MonoBehaviour
 {
     public static FolderHolder instance;
-    public SerializableDictionary&ltstring, FolderData&gt folderDatas = new();
+    public SerializableDictionary&lt;string, FolderData&gt; folderDatas = new();
     uint count = 0;
 
     public string GenerateFolderGUID()
@@ -115,7 +115,7 @@ namespace FolderDataFunctions
 
         public static Icon DefineIcon(FolderData folderData, GameObject iconGameObject, int i)
         {
-            Icon icon = iconGameObject.GetComponent&ltIcon&gt();
+            Icon icon = iconGameObject.GetComponent&lt;Icon&gt;();
             Vector2Int coordinates = new(folderData.xCoordinates[i], folderData.yCoordinates[i]);
             icon.canBeDestroyed = folderData.canBeDestroyeds[i];
             icon.gridCoordinates = coordinates;
@@ -130,7 +130,7 @@ namespace FolderDataFunctions
 
             if (folderData.pinWindowDatas[i] != null && folderData.pinWindowDatas[i] != "")
             {
-                LockScript lockScript = icon.AddComponent&ltLockScript&gt();
+                LockScript lockScript = icon.AddComponent&lt;LockScript&gt;();
                 icon.pinWindowData = FolderHolder.instance.GUIDToWindowData(folderData.pinWindowDatas[i]);
                 icon.pinWindowData.SetPinWindowData(lockScript);
             }
@@ -176,16 +176,16 @@ using UnityEngine;
 public class FolderHolder : MonoBehaviour
 {
     public static FolderHolder instance;
-    public SerializableDictionary&ltstring, FolderData&gt folderDatas = new();
+    public SerializableDictionary&lt;string, FolderData&gt; folderDatas = new();
     public SaveData saveData;
     [SerializeField] WindowData[] windowDatas;
 
-    Dictionary&ltstring, WindowData&gt windowDataLookUpTable = new Dictionary&ltstring, WindowData&gt();
+    Dictionary&lt;string, WindowData&gt; windowDataLookUpTable = new Dictionary&lt;string, WindowData&gt;();
 
 
     private void Awake()
     {
-        var folderHolders = FindObjectsOfType&ltFolderHolder&gt();
+        var folderHolders = FindObjectsOfType&lt;FolderHolder&gt;();
         if (folderHolders.Length == 1)
         {
             instance = this;
@@ -205,7 +205,7 @@ public class FolderHolder : MonoBehaviour
 
     public void Load()
     {
-        folderDatas = JsonUtility.FromJson&ltSerializableDictionary&ltstring, FolderData&gt&gt(saveData.desktopData);
+        folderDatas = JsonUtility.FromJson&lt;SerializableDictionary&lt;string, FolderData&gt;&gt;(saveData.desktopData);
     }
 
     private void PopulateWindowDataLookUpTable()
@@ -249,10 +249,10 @@ To make the game feel as immersive as possible it needed to feel like a computer
  <pre>
  <code>
 
-    public string[] GetSubfolders(string originFolder, out Dictionary&ltstring, string&gt lockedFolders)
+    public string[] GetSubfolders(string originFolder, out Dictionary&lt;string, string&gt; lockedFolders)
     {
-        List&ltstring&gt subfolderers = new();
-        Stack&ltstring&gt folderStack = new();
+        List&lt;string&gt; subfolderers = new();
+        Stack&lt;string&gt; folderStack = new();
         lockedFolders = new();
         subfolderers.Add(originFolder);
 
@@ -276,7 +276,7 @@ To make the game feel as immersive as possible it needed to feel like a computer
         }
 
         int i = 0;
-        while (folderStack.Count &gt 0 && i &lt 100)
+        while (folderStack.Count &gt; 0 && i &lt; 100)
         {
             int k = 0;
             FolderData folderData = folderDatas[folderStack.Pop()];
@@ -337,8 +337,8 @@ To make the game feel as immersive as possible it needed to feel like a computer
             return;
     }
 
-    IconGrid[] iconGrids = FindObjectsOfType&ltIconGrid&gt();
-    IconGrid desktop = GetComponent&ltIconGrid&gt();
+    IconGrid[] iconGrids = FindObjectsOfType&lt;IconGrid&gt;();
+    IconGrid desktop = GetComponent&lt;IconGrid&gt;();
     foreach (IconGrid iconGrid in iconGrids)
     {
         if (triggerIcon != null && triggerIcon.folderWindow == iconGrid) { continue; }
@@ -366,10 +366,10 @@ IEnumerator ScatterIconsOneByOne(GlitchEvents.ScatterType scatterType, GameObjec
     CursorLockMode pastLockState, float totalScatterTime, Icon triggerIcon, FolderData triggerFolderData, string triggerIconGUID, IconGrid triggerIconFolder)
 {
     Icon newOriginIcon = null;
-    List&ltIcon&gt icons = new List&ltIcon&gt();
+    List&lt;Icon&gt; icons = new List&lt;Icon&gt;();
     Vector3 topRight = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
     Vector3 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(-1, -1, 0)) / 2;
-    string[] folders = FolderHolder.instance.GetSubfolders(originFolder, out Dictionary&ltstring, string&gt lockedFolders);
+    string[] folders = FolderHolder.instance.GetSubfolders(originFolder, out Dictionary&lt;string, string&gt; lockedFolders);
     int iconNum = 0;
     foreach (string folder in folders)
     {
@@ -377,14 +377,14 @@ IEnumerator ScatterIconsOneByOne(GlitchEvents.ScatterType scatterType, GameObjec
         iconNum += FolderHolder.instance.folderDatas[folder].iconNames.Length;
     }
     float scatterTime = 0;
-    if (totalScatterTime &gt 0) { scatterTime = totalScatterTime / iconNum; }
+    if (totalScatterTime &gt; 0) { scatterTime = totalScatterTime / iconNum; }
 
     foreach (string folder in folders)
     {
         FolderData folderData = FolderHolder.instance.folderDatas[folder];
         if (folderData == null || folderData.iconNames == null) { continue; }
 
-        for (int i = 0; i &lt folderData.iconNames.Length; i++)
+        for (int i = 0; i &lt; folderData.iconNames.Length; i++)
         {
             if (folderData.iconTypes[i] == Icon.IconType.Trashcan && folder == triggerIconGUID) { continue; }
             yield return new WaitForSeconds(scatterTime);
@@ -470,7 +470,7 @@ public class WindowData : ScriptableObject
 
     private void SaveWindowDataOnWindow(GameObject window)
     {
-        window.GetComponent&ltCloseWindow&gt().windowData = this;
+        window.GetComponent&lt;CloseWindow&gt;().windowData = this;
     }
 }
 
