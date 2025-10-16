@@ -10,9 +10,9 @@ The data structure is just folders holding files and its own folder hierarchy. E
 
  <Details>
  <summary> Code </summary>
-Irrelevant code removed
+<pre>
+<code>
 
-```cs
 using System;
 using UnityEngine;
 
@@ -32,9 +32,7 @@ public class FolderData
     public GameObject[] folderWindows;
     public Icon.IconType[] iconTypes;
 }
-```
 
-```cs
 using UnityEngine;
 
 public class FolderHolder : MonoBehaviour
@@ -54,9 +52,7 @@ public class FolderHolder : MonoBehaviour
         return GUID;
     }
 }
-```
 
-```c
 
 using UnityEngine;
 
@@ -143,8 +139,10 @@ namespace FolderDataFunctions
         }
     }
 }
-```
 
+
+</code>
+</pre>
  </Details>
 
 #### Saving 
@@ -156,8 +154,9 @@ namespace FolderDataFunctions
 
  <Details>
  <summary> Code </summary>
+ <pre>
+ <code>
 
-```cs
 
 using UnityEngine;
 
@@ -170,9 +169,7 @@ public class SaveData : ScriptableObject
 }
  
 
-```
 
-```cs
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -237,8 +234,8 @@ public class FolderHolder : MonoBehaviour
         return windowDataLookUpTable[GUID];
     }
 }
-```
-
+</code>
+</pre>
  </Details>
 
 #### Folder Action
@@ -249,8 +246,9 @@ To make the game feel as immersive as possible it needed to feel like a computer
 
  <Details>
  <summary> Scatter code </summary>
+ <pre>
+ <code>
 
-```cs
     public string[] GetSubfolders(string originFolder, out Dictionary<string, string> lockedFolders)
     {
         List<string> subfolderers = new();
@@ -418,8 +416,9 @@ IEnumerator ScatterIconsOneByOne(GlitchEvents.ScatterType scatterType, GameObjec
         }
     }
 
-```
 
+</code>
+</pre>
  </Details>
 
 ## Windows and Unity UI
@@ -433,8 +432,9 @@ The window data scriptable objects was made so other people could expand on it. 
 
  <Details>
  <summary> Code </summary>
+ <pre>
+ <code>
 
-```cs
 using UnityEngine;
 
 public class WindowData : ScriptableObject
@@ -474,8 +474,8 @@ public class WindowData : ScriptableObject
     }
 }
 
-```
-
+</code>
+</pre>
  </Details>
 
 ### Tools
