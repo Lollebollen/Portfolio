@@ -13,9 +13,8 @@ The largest problem with using Firebase only for asynchronous multiplayer was th
 
 <img width="546" height="254" alt="Menu" src="https://github.com/user-attachments/assets/10b8009f-8223-4361-89d8-1eea64d2d7e7" /> 
 
- <Details>
- <summary> Code </summary>
-
+<Details>
+<summary> Code </summary>
 <pre>
 <code>
 
