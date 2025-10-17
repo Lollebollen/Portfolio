@@ -1,4 +1,8 @@
 # *Your Platform*
+
+### [Main page](..) 
+---
+
 ## Game summary
 *Your Platform* is an asynchronous multiplayer 2D platformer, where you place down blocks to aid yourself or make the next person fail.  
 

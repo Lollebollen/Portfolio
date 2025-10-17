@@ -1,4 +1,8 @@
 # *REGAUGE*
+
+### [Main page](..) 
+---
+
 ## Game Summary
 Hop in a mech and when yours explodes get to cover and run away from the other players that are trying to stomp you, until you get your mech drop and *REGAUGE*.
 

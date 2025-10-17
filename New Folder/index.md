@@ -1,4 +1,8 @@
 # *New Folder*
+
+### [Main page](..) 
+---
+
 ### Game Summary
 *New Folder* is a horror puzzle game where you dive into an old pc and figure out passwords to discover mysteries.
 
