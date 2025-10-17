@@ -157,7 +157,7 @@ namespace FolderDataFunctions
 
 
  <Details>
- <summary> &lt;&lt; Click Here For Code &gt;&gt; </summary>
+ <summary> <span style="color: green"> &lt;&lt; Click Here For Code &gt;&gt; </span></summary>
  <pre>
  <code>
 
@@ -249,7 +249,7 @@ To make the game feel as immersive as possible it needed to feel like a computer
 ![FolderAction](https://github.com/user-attachments/assets/bfaf8492-ebe3-4942-b039-6930182ac8f3)
 
  <Details>
- <summary> &lt;&lt; Click Here For Code &gt;&gt; </summary>
+ <summary> <span style="color: green"> &lt;&lt; Click Here For Code &gt;&gt; </span></summary>
  <pre>
  <code>
 
@@ -436,7 +436,7 @@ Simply put, this game revolves around ui, so therefore I needed to know how to u
 The window data scriptable objects was made so other people could expand on it. However it did miss on this since along the development it was needed to have one data open two different kinds of windows to sell the glitch effect. So the solution was to simply have two methods, one standard and another for exceptions.
 
  <Details>
- <summary> &lt;&lt; Click Here For Code &gt;&gt; </summary>
+ <summary> <span style="color: green"> &lt;&lt; Click Here For Code &gt;&gt; </span></summary>
  <pre>
  <code>
 

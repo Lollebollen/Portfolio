@@ -14,7 +14,7 @@ The largest problem with using Firebase only for asynchronous multiplayer was th
 <img width="546" height="254" alt="Menu" src="https://github.com/user-attachments/assets/10b8009f-8223-4361-89d8-1eea64d2d7e7" /> 
 
 <Details>
-<summary> &lt;&lt; Click Here For Code &gt;&gt; </summary>
+<summary> <span style="color: green"> &lt;&lt; Click Here For Code &gt;&gt; </span></summary>
 <pre>
 <code>
 
@@ -98,9 +98,9 @@ The placing is heavily inspierd by _Ballons Tower Defens_ and _Plants vs Zombies
 <img width="546" height="254" alt="Replay" src="https://github.com/user-attachments/assets/efe81cf7-b1b3-4130-9544-149d0498ccae" />
 
 The replays just initilize the level like usual but instead of a player it just spawns a ghost that interpulates between a bunch of points.
- <Details>
- <summary> &lt;&lt; Click Here For Code &gt;&gt; </summary>
 
+<Details>
+<summary> <span style="color: green"> &lt;&lt; Click Here For Code &gt;&gt; </span></summary>
 <pre>
 <code>
 
