@@ -13,7 +13,7 @@ The data structure is just folders holding files and its own folder hierarchy. E
 <img width="546" height="254" alt="Data structure" src="https://github.com/user-attachments/assets/9505b8a3-44bc-4434-a87a-0e7fc20b580e" />
 
  <Details>
- <summary> Code </summary>
+ <summary> <color=green> &lt;&lt; Click Here For Code &gt;&gt; </color=green></summary>
 <pre>
 <code>
 
@@ -157,7 +157,7 @@ namespace FolderDataFunctions
 
 
  <Details>
- <summary> Code </summary>
+ <summary> &lt;&lt; Click Here For Code &gt;&gt; </summary>
  <pre>
  <code>
 
@@ -249,7 +249,7 @@ To make the game feel as immersive as possible it needed to feel like a computer
 ![FolderAction](https://github.com/user-attachments/assets/bfaf8492-ebe3-4942-b039-6930182ac8f3)
 
  <Details>
- <summary> Scatter code </summary>
+ <summary> &lt;&lt; Click Here For Code &gt;&gt; </summary>
  <pre>
  <code>
 
@@ -419,6 +419,7 @@ IEnumerator ScatterIconsOneByOne(GlitchEvents.ScatterType scatterType, GameObjec
             desktop.SaveFolderData(newFolderData, folder);
         }
     }
+}
 
 
 </code>
@@ -435,7 +436,7 @@ Simply put, this game revolves around ui, so therefore I needed to know how to u
 The window data scriptable objects was made so other people could expand on it. However it did miss on this since along the development it was needed to have one data open two different kinds of windows to sell the glitch effect. So the solution was to simply have two methods, one standard and another for exceptions.
 
  <Details>
- <summary> Code </summary>
+ <summary> &lt;&lt; Click Here For Code &gt;&gt; </summary>
  <pre>
  <code>
 
@@ -480,7 +481,7 @@ public class WindowData : ScriptableObject
 
 </code>
 </pre>
- </Details>
+</Details>
 
 ### Tools
 In retrospect there needed to be tools built alongside my implementations of a lot of these systems. Since other people were able to set up a scene and make window datas fine, the process however was needlessly tedious and clunky. Even simple things could have helped such as being able to select the current folder or icon in the hierarchy if you had it selected in game.

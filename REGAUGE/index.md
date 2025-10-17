@@ -10,7 +10,7 @@ Hop in a mech and when yours explodes get to cover and run away from the other p
 Implementing couch co-op with Unity's input system required some structure for REGAUGE since the player needed to swap between multiple different kinds of characters. The implementation I went with is having a controller that can attach characters to itself and most of the time handle the logic for switching characters.
 
 <Details>
-<summary> Code </summary>
+<summary> &lt;&lt; Click Here For Code &gt;&gt; </summary>
 <pre>
 <code>
 
@@ -119,7 +119,7 @@ The rotations that are being tracked by the player are two input vectors for mov
 
 
 <Details>
-<summary> Code </summary>
+<summary> &lt;&lt; Click Here For Code &gt;&gt; </summary>
 <pre>
 <code>
 
