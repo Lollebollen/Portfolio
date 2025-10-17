@@ -9,10 +9,11 @@ Hop in a mech and when yours explodes get to cover and run away from the other p
 ## Player
  Implementing couch co-op with Unity's input system required some structure for REGAUGE since the player needed to swap between multiple different kinds of characters. The implementation I went with is having a controller that can attach characters to itself and most of the time handle the logic for switching characters.
 
-  <Details>
- <summary> Code </summary>
+<Details>
+<summary> Code </summary>
+<pre>
+<code>
 
-```cs
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -32,7 +33,7 @@ public class PlayerCharacterBase : MonoBehaviour
 
     public virtual void Awake()
     {
-        playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GetComponent&lt;PlayerMovement&gt;();
         playerMovement.playerCharacter = this;
         deadzone = PlayerPrefs.GetFloat(Settings.deadZoneKey);
     }
@@ -106,9 +107,9 @@ public class PlayerCharacterBase : MonoBehaviour
     public virtual void DestroyCharacter() { }
 }
 
-```
-
- </Details>
+</code>
+</pre>
+</Details>
 
  ### Rotation
 The mech rotates a lot and this requires a bit of handling since there are also a few different rotation ways.
@@ -117,10 +118,11 @@ The mech rotates a lot and this requires a bit of handling since there are also 
 The rotations that are being tracked by the player are two input vectors for movement and aiming, then there is the current direction of the legs and the torso which is also being smoothed. Then there is also a dash state where the player slowly becomes more responsive, the first thing that unlocks for the player after the dash is the movement rather than the ability to shoot in the aim direction. Lastly the torso starts to rotate in the input direction again. The movement direction is also used instead of the aim direction when aim input is given, the reason for this was to make the game more accessible and give the player a simpler way to interact with the game. When using a mouse it instead defaults to its direction instead of the movement input. 
 
 
- <Details>
- <summary> Code </summary>
+<Details>
+<summary> Code </summary>
+<pre>
+<code>
 
-```cs
 using System.Collections;
 using UnityEngine;
 
@@ -140,7 +142,7 @@ public class PlayerTorsoRotation : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponentInChildren<Animator>();
+        animator = GetComponentInChildren&lt;Animator&gt;();
         aimDirection = Vector3.back;
     }
 
@@ -160,7 +162,7 @@ public class PlayerTorsoRotation : MonoBehaviour
             if (playerCharacter.mouse != null) { target = mouse; }
             else { target = input2; }
         }
-        if (target != Vector2.zero && target.sqrMagnitude > Mathf.Pow(playerCharacter.deadzone, 2))
+        if (target != Vector2.zero && target.sqrMagnitude &gt; Mathf.Pow(playerCharacter.deadzone, 2))
         {
             aimDirection = new Vector3(target.x, 0, target.y);
 
@@ -197,9 +199,9 @@ public class PlayerTorsoRotation : MonoBehaviour
     }
 }
 
-```
-
- </Details>
+</code>
+</pre>
+</Details>
 
  ## Tiniest Map
  The game had a bit of a problem during a play test which was that it was really boring to keep playing for a while. This was known of course however the focus until then was to make a great base. So when we felt that we could spend some time we started adding to the breadth of the game including new maps.
