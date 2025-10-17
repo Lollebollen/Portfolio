@@ -16,16 +16,17 @@ The largest problem with using Firebase only for asynchronous multiplayer was th
  <Details>
  <summary> Code </summary>
 
-```cs
+<pre>
+<code>
 
 private void CheckForOpenGame(DataSnapshot snapShot)
 {
-    GameStates gameStates = JsonUtility.FromJson<GameStates>(snapShot.GetRawJsonValue());
+    GameStates gameStates = JsonUtility.FromJson&lt;GameStates&gt;(snapShot.GetRawJsonValue());
 
-    for (int i = 0; i < gameStates.activeStatus.Length; i++)
+    for (int i = 0; i &lt; gameStates.activeStatus.Length; i++)
     {
         long time = gameStates.activeStatus[i].timeSetActive;
-        if (!gameStates.activeStatus[i].isActive || (time < System.DateTime.UtcNow.Ticks && new System.DateTime(time).Day != System.DateTime.UtcNow.Day))
+        if (!gameStates.activeStatus[i].isActive || (time &lt; System.DateTime.UtcNow.Ticks && new System.DateTime(time).Day != System.DateTime.UtcNow.Day))
         {
             SetGameActive(i);
             FetchGameData(i);
@@ -40,7 +41,7 @@ private void CheckForOpenGame(DataSnapshot snapShot)
 private void SetGameActive(int i)
 {
     Active active = new Active(true, System.DateTime.UtcNow.Ticks);
-    database.RootReference.Child("gameStates").Child("activeStatus").Child(i.ToString()).SetRawJsonValueAsync(JsonUtility.ToJson(active)).ContinueWithOnMainThread(task =>
+    database.RootReference.Child("gameStates").Child("activeStatus").Child(i.ToString()).SetRawJsonValueAsync(JsonUtility.ToJson(active)).ContinueWithOnMainThread(task =&gt;
     {
         if (task.Exception != null) { Debug.Log(task.Exception); }
         else
@@ -54,7 +55,7 @@ private void SetGameActive(int i)
 
 private void FetchGameData(int i)
 {
-    database.RootReference.Child("games").Child("gameData").Child(i.ToString()).GetValueAsync().ContinueWithOnMainThread(task =>
+    database.RootReference.Child("games").Child("gameData").Child(i.ToString()).GetValueAsync().ContinueWithOnMainThread(task =&gt;
     {
         if (task.Exception != null) { Debug.Log(task.Exception); }
         else
@@ -68,15 +69,15 @@ private void FetchGameData(int i)
 
 private void TryToStartGame(bool isReplay)
 {
-    if (gameDataindex == gameStateindex && gameData != null && gameData.Length > 1 && startTime != default)
+    if (gameDataindex == gameStateindex && gameData != null && gameData.Length &gt; 1 && startTime != default)
     {
         StartGame(isReplay);
     }
 }
 
-```
-
- </Details>
+</code>
+</pre>
+</Details>
 
 ## level Building
 
@@ -101,7 +102,8 @@ The replays just initilize the level like usual but instead of a player it just 
  <Details>
  <summary> Code </summary>
 
-```cs
+<pre>
+<code>
 
 using UnityEngine;
 
@@ -128,9 +130,9 @@ public class GhostPlayer : MonoBehaviour
         float ratio;
         do
         {
-            if (Time.time - startTime > ghost.times[ghost.times.Length - 1]) { Finished(); return; }
+            if (Time.time - startTime &gt; ghost.times[ghost.times.Length - 1]) { Finished(); return; }
             ratio = (Time.time - startTime - ghost.times[i - 1]) / (ghost.times[i] - ghost.times[i - 1]);
-            if (ratio < 1) { break; }
+            if (ratio &lt; 1) { break; }
             else { i++; }
         } while (true);
 
@@ -144,7 +146,6 @@ public class GhostPlayer : MonoBehaviour
     }
 }
 
-```
-
- </Details>
-
+</code>
+</pre>
+</Details>
