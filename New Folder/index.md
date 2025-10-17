@@ -13,7 +13,7 @@ The data structure is just folders holding files and its own folder hierarchy. E
 <img width="546" height="254" alt="Data structure" src="https://github.com/user-attachments/assets/9505b8a3-44bc-4434-a87a-0e7fc20b580e" />
 
  <Details>
- <summary> <color=green> &lt;&lt; Click Here For Code &gt;&gt; </color=green></summary>
+ <summary> <span style="color: green"> &lt;&lt; Click Here For Code &gt;&gt; </span></summary>
 <pre>
 <code>
 
